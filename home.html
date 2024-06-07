@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GRC</title>
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+    crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+    .shadow-md {
+      background: rgba(2, 2, 2, 0.35);
+
+    }
+    .text-white, a {
+      font-family: Source Sans 3;
+font-size: 24px;
+font-weight: 600;
+line-height: 34.18px;
+text-align: left;
+
+    }
+    
+
+    .bg-cover-custom {
+      background-size: cover;
+      background-position: center;
+    }
+
+    .red-more {
+      margin-right: 1172px;
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    div.card-1 img {
+      max-width: 50%;
+      background-color: transparent;
+    }
+
+    div.card-2 {
+      position: absolute;
+      top: 110px;
+      right: 0;
+      width: 200px;
+      height: 40px;
+      border: 3px solid #73AD21;
+      margin-right: 310px;
+      background-color: aliceblue;
+
+
+    }
+
+    div.card-1 img {
+      max-width: 50%;
+      margin-top: 53px;
+      margin-right: 0px;
+      background-color: transparent;
+      margin-left: 131px;
+
+    }
+
+    div.card-1 {
+      position: relative;
+      width: 400px;
+      height: 200px;
+      border: 3px solid #0b9f26;
+      margin-left: 678px;
+      margin-bottom: 3px;
+      margin-top: -163px;
+      background-color: #0b9f26;
+
+    }
+
+    div.card-3 {
+      position: absolute;
+
+    }
+
+    img,
+    video {
+      max-width: 4%;
+      height: auto;
+      padding: 16px;
+    }
+
+    .grid img {
+      max-width: 100%;
+      padding: 0px;
+      height: 100%;
+    }
+
+    .border {
+      width: 100%;
+    }
+
+    .imge-logo {
+      max-width: 15%;
+      height: auto;
+      padding: 0px;
+
+    }
+
+    .k-logo {
+      font-family: Proxima Nova;
+      font-size: 40px;
+      font-weight: 900;
+      line-height: 67.7px;
+      text-align: left;
+      
+
+    }
+
+    .image-container img {
+      max-width: 51%;
+      height: auto;
+      padding: 0%;
+      margin-left: 84px;
+    }
+
+    .font-bold-1 {
+      font-weight: bolder;
+      font-size: 48px;
+      margin-bottom: -12px;
+      top: 10p;
+      margin-top: -63px;
+      color: #021205;
+      font-family: Proxima Nova;
+    }
+
+    .container-text {
+      padding: 1.5rem;
+      margin-left: 73px;
+    }
+
+    .rea img {
+      max-width: 10%;
+    }
+
+    .max-w-52 {
+      max-width: 13rem;
+      margin-left: 126px;
+      margin-top: -123px;
+      margin-bottom: 60px;
+      rotate: 52px;
+    }
+
+    .tiger {
+      margin-top: -30px;
+      position: absolute;
+
+
+    }
+
+    .grid img {
+      max-width: 100%;
+      padding: 0px;
+      height: 100%;
+      top: 0px;
+      /* margin-left: -27px; */
+    }
+
+    .a.regi {
+
+      font-weight: 600;
+      margin-left: -90px;
+      margin-top: -120px;
+
+
+    }
+
+    .p-6 {
+      padding: 4.5rem;
+      padding: 0px 62px 0px 58px;
+    }
+
+    .max-w-60 {
+      margin-top: -20px;
+      margin-left: 85px;
+    }
+
+    .bg-opacity-70.ml-40 {
+      margin-left: 5rem;
+    }
+    .btn-regi {
+      width: Hug (249px)px;
+height: Hug (64px)px;
+top: 196.1px;
+left: 813px;
+padding: 6px 32px 6px 32px;
+gap: 12px;
+border: 1px 0px 0px 0px;
+opacity: 0px;
+border: 1px solid rgba(5, 64, 10, 1);
+background: rgba(255, 255, 255, 1);
+
+box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.24);
+
+box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.25);
+margin-top: 10px;
+margin-left: -60px;
+    }
+
+    .responsive-image {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 50%;
+      max-width: 300px;
+      height: auto;
+      object-fit: cover;
+      background-color: transparent;
+    }
+
+    .card-container {
+      position: relative;
+      padding: 20px;
+      background-color: #18c340;
+      border-radius: 0.25rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin-right: 10px;
+      margin-left: 10px;
+    }
+ 
+
+    .grc-h{
+      font-family: Proxima Nova;
+font-size: 72px;
+font-weight: 700;
+line-height:  2.7px;
+text-align: left;
+
+background: rgba(34, 34, 34, 1);
+ } 
+ .text-white {
+    font-size:35px;
+    font-weight: 100;
+    line-height: 1.2;
+    color: white;
+  
+}
+ 
+/* navbar */
+.bg-opacity-20 {
+    --tw-bg-opacity: 0.2;
+    margin-top: -4px;
+    position: sticky;
+}
+ 
+    @media (max-width: 768px) {
+      .responsive-image {
+        max-width: 200px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .responsive-image {
+        max-width: 100px;
+      }
+    }
+  </style>
+
+</head>
+
+
+<body>
+
+  <div class="relative"style="background: rgba(2, 2, 2, 0.35);">
+    <!-- Navigation Bar -->
+    <nav class="shadow-md sticky top-0 absolute w-full z-10" style="background: rgba(2, 2, 2, 0.35);">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" style="background: rgba(2, 2, 2, 0.35);">
+        <div class="flex justify-between h-16">
+          <div class="flex items-center">
+            <!-- Logo -->
+            <a href="#" class="text-white flex-shrink-0">grc</a>
+          </div>
+          <div class="hidden md:flex md:items-center md:space-x-4">
+            <!-- Navigation Links for Desktop -->
+            <a href="#" class="text-white hover:text-yellow-200 block px-3 py-2 rounded-md text-base font-medium">Home</a>
+            <a href="#" class="text-white hover:text-yellow-200 block px-3 py-2 rounded-md text-base font-medium">Committee</a>
+            <a href="#" class="text-white hover:text-yellow-200 block px-3 py-2 rounded-md text-base font-medium">Program</a>
+            <a href="#" class="text-white hover:text-yellow-200 block px-3 py-2 rounded-md text-base font-medium">Sponsor</a>
+            <a href="#" class="text-white hover:text-yellow-200 block px-3 py-2 rounded-md text-base font-medium">Registration</a>
+            <a href="#" class="text-white hover:text-yellow-200 block px-3 py-2 rounded-md text-base font-medium">Accommodation</a>
+            <a href="#" class="text-white hover:text-yellow-200 block px-3 py-2 rounded-md text-base font-medium">Contact Us</a>
+          </div>
+          <!-- Mobile menu button -->
+          <div class="-mr-2 flex md:hidden">
+            <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-green-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500" aria-controls="mobile-menu" aria-expanded="false" id="mobile-menu-button">
+              <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+              </svg>
+              <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Mobile menu, show/hide based on menu state. -->
+      <div class="md:hidden hidden" style="background: rgba(2, 2, 2, 0.35);" id="mobile-menu">
+        <div class="pt-2 pb-3 space-y-1">
+          <!-- Home Link for Mobile -->
+          <a href="#" class="text-white hover:text-yellow-200 block px-3 py-2 rounded-md text-base font-medium">Home</a>
+          <a href="#" class="text-white hover:text-yellow-200 block px-3 py-2 rounded-md text-base font-medium">Committee</a>
+          <a href="#" class="text-white hover:text-yellow-200 block px-3 py-2 rounded-md text-base font-medium">Program</a>
+          <a href="#" class="text-white hover:text-yellow-200 block px-3 py-2 rounded-md text-base font-medium">Sponsor</a>
+          <a href="#" class="text-white hover:text-yellow-200 block px-3 py-2 rounded-md text-base font-medium">Registration</a>
+          <a href="#" class="text-white hover:text-yellow-200 block px-3 py-2 rounded-md text-base font-medium">Accommodation</a>
+          <a href="#" class="text-white hover:text-yellow-200 block px-3 py-2 rounded-md text-base font-medium">Contact Us</a>
+        </div>
+      </div>
+    </nav>
+    <div class="w-624 h-163 absolute top-212 left-96 gap-0 opacity-0"></div>
+
+
+    <!-- Hero Section with Background Image -->
+    <div class="bg-cover-custom h-screen bg-center top-1 relative"
+      style="background-image: url('/Guha-Research/assets/images/pexels_freestockpro_3224801.jpeg');">
+      <div class="flex items-center  h-full bg-black bg-opacity-20">
+        <div class=" bg-opacity-70 ml-40 mb-40 mt-4 inline-block  ">
+          <div class="grc-h  rounded-lg-0  shadow-lg p-3 mr-12" style="margin-right: 80px;">
+            <span class="text-white  text-2xl font-bold tracking-wider" style="font-size: -large">Guha Research Conference</span>
+          </div>
+
+          <div class="grc-h  rounded-lg-0 mr-3 p-3 ml-10">
+            <span class="text-white text-4xl    font-bold tracking-wider">/2024 SESSION</span>
+          </div>
+        </div>
+
+
+
+      </div>
+      <div class="w-full relative mx-auto p-  bg-white top[-120px] shadow-md rounded-sm">
+        <div class="grid grid-cols-1  md:grid-cols-2 gap-4">
+          <!-- Left Column -->
+          <div>
+            <div class="flex items-center mb-4">
+              <div class="bg-orange-500 p-1 rounded ml-16">
+                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 16 16"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M10.5 3a.5.5 0 0 0 0 1h2.793L3.146 14.146a.5.5 0 1 0 .708.708L14 4.707V7.5a.5.5 0 0 0 1 0v-4a.5.5 0 0 0-.5-.5h-4z" />
+                </svg>
+              </div>
+              <h2
+                class="ml-3  sm:ml-4 md:ml-6 lg:ml-8 xl:ml-10 text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-gray-800">
+                2024 Conference in Kaziranga, Assam
+              </h2>
+            </div>
+            <a href="#" class="text-green-500 hover:text-green-700 underline ml-16">Read More</a>
+            <br>
+            <p class="text-gray-600 mb-2 ml-16">From 5th Nov (Tue) to 9th Nov (Sat).</p>
+            <p class="text-gray-500 mb-4 ml-16">Kaziranga National Park is a UNESCO World Heritage Site</p>
+          </div>
+
+          <!-- Right Column -->
+          <div class="card-container mr-6 ">
+            <p class="text-white  display-4"><b>Meet Indian Rhino</b></p>
+            <p class="text-white text-2xl">The Indian rhino has a</p>
+            <p class="text-white text-2xl">A single horn</p>
+            <img src="/Guha-Research/assets/vectors/23-3-2024-13-37-39-881-removebg-preview.png" alt="Indian Rhino"
+              class="responsive-image w-48">
+            <button class="btn-regi">
+              Register Now <i class="bi bi-arrow-right-circle"></i>
+            </button>
+          </div>
+
+          <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+          <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+        </div>
+
+
+
+
+
+
+
+        <div class="container  mx-auto p-4 " style="background: rgba(255, 250, 235, 1);
+        " >
+          <div class="flex flex-col lg:flex-row items-center">
+            <div class="lg:w-1/2 p-6 lg:p-10  ">
+              <h1 class="text-3xl font-bold mb-4">About Guha Research Conference</h1>
+              <p class="mb-4 text-justify">Guha Research Conference (GRC) is a professional society set up by Indian
+                scholars to develop the field of Biochemistry. It was established in 1960, and is named after Professor
+                Biresh Chandra Guha, Father of modern Biochemistry in India. The first four GRC meetings were held
+                alongside the annual conference of the Indian Science Congress. Subsequently, under the guidance of
+                Prof. Pushpa M Bhargava, it was registered as a society with a convener elected annually, to organize
+                the annual conference.</p>
+              <p class="mb-4 text-justify">During its formative years (1960-65), GRC had 33 professionals from major
+                national institutes, by 2024, the membership had grown to XXX members.</p>
+            </div>
+            <div class="lg:w-1/2">
+              <img src="/Guha-Research/assets/images/pexels_renaldicted_1125451911.jpeg" alt="Past SBC Events"
+                class="w-full h-auto p-0">
+            </div>
+          </div>
+
+         </div>
+
+        <script src="https://cdn.tailwindcss.com"></script>
+        <div class="container mx-auto p-0 md:max-w-640 md:ml-8 md:flex md:justify-center">
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-0">
+            <div class="relative">
+              <img src="/Guha-Research/assets/images/pexels_frans_van_heerden_2018466312921.jpeg" alt="Image 1"
+                class="w-full h-full object-cover">
+            </div>
+            <div class="relative">
+              <img src="/Guha-Research/assets/images/pexels_frans_van_heerden_2018466313171.jpeg" alt="Image 2"
+                class="w-full h-full object-cover">
+            </div>
+            <div class="relative">
+              <img src="/Guha-Research/assets/images/pexels_freestockpro_3224801.jpeg" alt="Image 3"
+                class="w-full h-full object-cover">
+            </div>
+            <div class="relative">
+              <img src="/Guha-Research/assets/images/pexels_karen_alchin_2617217976771.jpeg" alt="Image 4"
+                class="w-full h-full object-cover">
+            </div>
+            <div class="relative">
+              <img src="/Guha-Research/assets/images/images.jpeg" alt="Image 5" class="w-full h-full object-cover">
+            </div>
+            <div class="relative">
+              <img src="/Guha-Research/assets/images/pexels_pixabay_599891.jpeg" alt="Image 6"
+                class="w-full h-full object-cover">
+            </div>
+            <div class="relative">
+              <img src="/Guha-Research/assets/images/pexels_quang_nguyen_vinh_22254951185211.jpeg" alt="Image 7"
+                class="w-full h-full object-cover">
+            </div>
+            <div class="relative">
+              <img src="/Guha-Research/assets/images/pexels_renaldicted_1125451911.jpeg" alt="Image 8"
+                class="w-full h-full object-cover">
+            </div>
+          </div>
+        </div>
+        <div class="border-t-2  border-black my-4 mb-[-12rem]">
+        </div>
+        <img src="/Guha-Research/assets/images/image_27.png"
+          class="max-w-60 mt-[-139px] bg-transparent transform -rotate-90 origin-bottom" alt="">
+        <div class="section-1">
+          <div class="row flex flex-col md:flex-row mt-[0-rem] items-center justify-center space-y-4 md:space-x-4">
+            <span class="text-end">
+              <h1 class="text-2xl sm:text-3xl lg:text-4xl"><b>KAZIRANGA</b></h1>
+              <h1 class="text-2xl sm:text-3xl lg:text-4xl">
+                <b>NATIONAL PARK</b>
+              </h1>
+            </span>
+            
+            <img src="/Guha-Research/assets/images/image_24.png" alt="Kaziranga National Park" class="imge-logo">
+          </div>
+        </div>
+
+        <br><br>
+
+        <div class="max-w-screen-xl mx-auto overflow-hidden p-6 bg-white shadow-md rounded-lg">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Block 1 -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+              <h2 class="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-green-600 mb-2">01</h2>
+              <p class="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-700">
+                Kaziranga boasts the world's highest density of
+                <span class="text-green-600 font-semibold">one-horned rhinoceroses</span>
+                and diverse wildlife.
+              </p>
+            </div>
+
+            <!-- Block 2 -->
+            <div class="relative bg-green-500 p-4 rounded-lg shadow-md text-white max-w-xs mx-auto overflow-hidden" style="margin-top: -40px">
+
+
+              <h2 class="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white-600 mb-2">02</h2>
+              <p class="text-base Font
+              Proxima Nova sm:text-lg md:text-xl lg:text-2xl text-white-700"  >
+                Enjoy Kaziranga's lush forests,<span class="text-green-900 font-semibold"> tall elephant grass,</span>and serene Brahmaputra River.
+                
+ 
+              </p>
+
+ 
+              <div class="image-container">
+                <img src="/Guha-Research/assets/images/111-removebg-preview.png" alt="Cheetah"
+                  class="w-52 mr-1 h-auto object-cover">
+              </div>
+            </div>
+            <!-- Block 3 -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+              <h2 class="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-green-600 mb-2">03</h2>
+              <p class="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-700">
+                Kaziranga's conservation efforts began with Baroness Mary Curzon's visit in
+                <span class="text-green-600 font-semibold">1904</span>.
+              </p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="bg-white p-16 rounded-lg max-w-5xl mx-auto">
+          <!-- <h1 class="text-2xl font-bold mb-8">About Kaziranga National Park</h1> -->
+          <p class="mb-0 text-1xl text-center-justify">Turned up in the Golaghat and Nagaon districts of the state of
+            Assam, Kaziranga National Park dates back to the early 20th century, when an American lady ‘Baroness Mary
+            Victoria Leiter Curzon’, who was the wife of Lord Curzon (The Viceroy of India), visited Kaziranga in the
+            year 1904. During that period, Kaziranga had been far-famed for its huge population of rhinoceros, but
+            during her trip in the region, she failed to see any rhinoceros in the forest instead only hoof marks were
+            observed. Well, it was bruited that Balaram Hazarika, the famous Assamese animal tracker, showed Baroness
+            Curzon and told her about the urgent requirement for wildlife conservation. Then, she asked her husband to
+            take the action for the preservation of rhinoceros, which her husband did on November 4, 1904, whilst he
+            suggested creating a reserve in Kaziranga. Later on, formal documents of that proposal for the formation of
+            the Kaziranga Reserve Forest were dated in September 1905. Therefore, on 1st June 1905, the Kaziranga
+            Proposed Reserve Forest was made with an area of 232 sq km (90 sq mi).</p>
+          <p class="mb-0 text-1xl text-center-justify">In 1950, the Kaziranga Game Sanctuary was again renamed as
+            Kaziranga Wildlife Sanctuary by P. D. Stracey (The forest conservationist), so as to exonerate the name of
+            hunting ideas. Later in 1954, the Assam Government passed the Rhinoceros Bill that enforced huge penalties
+            for hunting rhinoceros. In 1968, the government of Assam passed the Assam National Park Act of 1968, for the
+            creation of the national park. Finally, in the year 1974, 430 sq. km of the area was added and declared as
+            Kaziranga National Park.</p>
+
+
+        </div>
+
+        <div class="flex justify-end">
+          <img src="/Guha-Research/assets/images/image_28.png"
+            class="max-w-[22rem] bg-transparent mb-[-1.25rem] mt-[-6.5rem] transform -rotate-180 origin-bottom-" alt=""
+            style="padding: 14px; ;
+            rotate: -36deg; margin-right: -10px;
+            ">
+        </div>
+<!-- Footer -->
+
+<footer class="divide-y divide-green-800 bg-green-950 px-5 py-3 font-nova md:px-12 md:pt-8 lg:px-16 lg:pt-12 xl:pt-12">
+  <!-- Upper part of footer  -->
+  <div class="my-2 flex max-w-screen-xl flex-1 flex-row justify-center p-3 md:justify-between md:gap-24 md:pb-12 xl:mx-auto xl:p-0 xl:pb-24">
+    <!-- Feature text in footer  -->
+    <div class="hidden flex-col items-end text-gray-800 *:px-6 *:font-bold md:flex md:*:px-2">
+      <div class="bg-white py-4 md:py-1 md:text-3xl lg:text-4xl xl:text-5xl">Guha Research Conference</div>
+      <div class="bg-white text-right md:ml-7 md:text-4xl lg:ml-16 lg:text-5xl xl:text-7xl">/2024 SESSION</div>
+    </div>
+    <!-- links section  -->
+    <div class="flex max-w-screen-md flex-row justify-between gap-9 text-white md:flex-row md:gap-x-10 lg:gap-x-20">
+      <div class="">
+        <div class="mb-5 text-lg font-bold">Links</div>
+        <div class="flex flex-col gap-y-3 *:text-base *:font-normal">
+          <a href="http://">Home</a>
+          <a href="http://">Committee</a>
+          <a href="http://">Program</a>
+          <a href="http://">Sponsers</a>
+          <a href="http://">Registration</a>
+          <a href="http://">Accomodation</a>
+          <a href="http://">Contact us</a>
+        </div>
+      </div>
+
+      <div>
+        <div class="mb-5 text-lg font-bold">Legal</div>
+        <div class="flex flex-col gap-y-3 *:text-base *:font-normal">
+          <a href="http://">Privacy Policy</a>
+          <a href="http://">Terms</a>
+        </div>
+      </div>
+    </div>
+  </div>
+   <!-- Copyright and social media link section  -->
+   <div class="flex flex-col py-4 text-xs font-light text-green-50 lg:text-sm">
+    <div>@ 2024 Guha Research Conference. All rights reserved.</div>
+  </div>
+</footer>
+
+</div>
+
+   
+
+
+
+
+
+        <script>
+
+          // Mobile menu toggle script
+          const menuButton = document.getElementById('mobile-menu-button');
+          const mobileMenu = document.getElementById('mobile-menu');
+
+          menuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            menuButton.children[0].classList.toggle('hidden');
+            menuButton.children[1].classList.toggle('hidden');
+          });
+        </script>
+
+
+      </div>
+</body>
+
+</html>

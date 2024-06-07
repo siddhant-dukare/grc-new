@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body style="background-color: bisque;">
+    <div class="container mx-auto max-w-md  mt-7 px-4 py-8 bg-gradient-to-br from-green-400 to-green-800 rounded-lg-0">
+        <form id="myForm" name="submit-to-google-sheet">
+            <div class="mb-4">
+                <label for="name" class="block text-sm font-bold text-gray-700">Name*</label>
+                <input type="text" id="name" name="name" class="form-input mt-1 block w-full rounded-md border-gray-300 shadow-sm" required>
+            </div>
+            <div class="mb-4">
+                <label for="email" class="block text-sm font-bold text-gray-700">Email*</label>
+                <input type="email" id="email" name="email" class="form-input mt-1 block w-full rounded-md border-gray-300 shadow-sm" required>
+            </div>
+            <div class="mb-4">
+                <label for="phone" class="block text-sm font-bold text-gray-700">Phone Number*</label>
+                <input type="tel" id="phone" name="phone" class="form-input mt-1 block w-full rounded-md border-gray-300 shadow-sm" required>
+            </div>
+            <div class="mb-4">
+                <label for="Location" class="block text-sm font-bold text-gray-700">Location</label>
+                <input type="text" id="company" name="company" class="form-input mt-1 block w-full rounded-md border-gray-300 shadow-sm">
+            </div>
+            <div class="mb-4">
+                <label for="comments" class="block text-sm font-bold text-gray-700">Message</label>
+                <textarea id="comments" name="comments" rows="4" class="form-textarea mt-1 block w-full rounded-md border-gray-300 shadow-sm"></textarea>
+            </div>
+            <button type="submit" class="bg-gradient-to-br from-green-600 to-white-600 hover:from-orange-500 hover:to-yellow-500 text-white font-bold py-2 px-4 rounded">Submit</button>
+            <div id="success" class="mt-4 text-green-700"></div>
+        </form>
+    </div>
+
+    <script>
+        const scriptURL = 'add google link'
+        const form = document.forms['submit-to-google-sheet']
+        const success = document.getElementById('success');
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            
+            if (form.checkValidity()) {
+                fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                    .then(response => {
+                        success.textContent = "Data successfully submitted!";
+                        setTimeout(function() {
+                            success.textContent = ""; 
+                        }, 3000);
+                        form.reset();
+                    })
+                    .catch(error => console.error('Error!', error.message));
+            } else {
+                success.textContent = "Please fill out all required fields.";
+                setTimeout(function() {
+                    success.textContent = ""; 
+                }, 3000);
+            }
+        });
+    </script>
+</body>
+</html>
